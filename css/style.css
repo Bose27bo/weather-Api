@@ -1,0 +1,140 @@
+/* navbar */
+.nav-logo a img{
+    width: 60px;
+}
+.nav-logo a h1{
+    font-size: 16px;
+    line-height: 2px;
+    font-weight: 700;
+}
+.nav-logo a span{
+    font-size: 10px;
+}
+.nav-list li a{
+    color: white;
+    border: 3px solid transparent;
+    text-align: center;
+    font-size: 16px;
+    padding: 4px 15px;
+}
+.nav-list li:hover a{
+    border-color: #009AD8;
+    border-radius: 50px;
+    text-align: center;
+    color: #009AD8;
+}
+
+
+/* header */
+header .weather-info{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("../images/banner.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.search-input input::placeholder{
+    color: #6D7575;
+}
+.search-input input:focus{
+    box-shadow: none;
+}
+.search-input input{
+    border-radius: 30px;
+    color: #009AD8 !important;
+}
+.search-input button{
+    padding: 0 50px;
+    background-color: #009AD8;
+    border: none;
+    color: white;
+    border-radius: 30px;
+}
+.search-input button:hover{
+    background-color: #009AD8;
+    color: white;
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: white;
+    background-color: #009AD8;
+}
+
+/* weather cards */
+.weather-data .locationName{
+    font-size: 50px;
+    color: #c6c6c6 !important;
+}
+.today .degree p{
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+}
+p{
+    font-family: Roboto, "Open Sans", sans-serif;
+}
+
+
+
+
+/* Footer */
+.footer .footer-icons a i{
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background-color: #252730;
+ color: #009ad8;
+ text-align: center;
+ text-decoration: none;
+ line-height: 2;
+ font-size: 20px;
+}
+.footer .footer-icons a i:hover {
+ background: #009ad8;
+ color: white;
+}
+
+.footer .footer-icons a{
+padding: 0 5px;
+}
+.search-input2 input::placeholder{
+    color: #6D7575;
+}
+.search-input2 input:focus{
+    box-shadow: none;
+}
+.search-input2 input{
+    border-radius: 30px;
+}
+.search-input2 button{
+    padding: 0 50px;
+    background-color: #009AD8;
+    border: none;
+    color: white;
+    border-radius: 30px;
+}
+.search-input2 button:hover{
+    background-color: #009AD8;
+    color: white;
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: white;
+    background-color: #009AD8;
+}
+.footer-text{
+    color: #a7b9b9;
+    font-size: .8125rem;
+}
+
+
+
+/* contact */
+.contact-input input::placeholder{
+    color: #6D7575;
+}
+.contact-input textarea::placeholder{
+    color: #6D7575;
+}
+
+.contact-input textarea{
+    max-height: 250px;
+    padding-bottom: 50px;
+}

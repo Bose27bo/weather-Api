@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>weather</title>
+</head>
+
+<body class="bg-dark">
+
+    <nav>
+        <div class="container nav-bar d-flex justify-content-between py-5 align-items-center">
+            <div class="nav-logo">
+                <a href="#" class="d-flex align-items-center text-decoration-none">
+                    <img src="images/logo@2x.png" alt="">
+                    <div class="ps-2 text-white">
+                        <h1>Weather</h1>
+                        <span>tagline goes here</span>
+                    </div>
+                </a>
+            </div>
+
+            <div>
+                <ul class="nav-list d-flex justify-content-between align-items-center gap-3">
+                    <li><a href="#" class="text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-decoration-none">News</a></li>
+                    <li><a href="#" class="text-decoration-none">Live cameras</a></li>
+                    <li><a href="#" class="text-decoration-none">Photos</a></li>
+                    <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header>
+        <div class="weather-info py-4">
+            <div class="container search-input input-group mb-5 pt-5">
+                <input type="search" class="form-control p-3 bg-dark border-0" placeholder="Find your location..." id="searchInput">
+                <button class="input-group-text btn btn-info" type="submit" id="btnSearch">Find</button>
+            </div>
+
+            <div class="container">
+                <div class="row bg-dark">
+                    <div class="today col-md-4 p-0">
+                        <div class="day-date p-2 d-flex justify-content-between align-items-center"
+                             id="todayDate"
+                             style="background-color: rgba(0, 0, 0, 0.3);  color: #6D7575;">
+                            <p id="dayNmae"></p>
+                            <div class="d-flex align-items-center">
+                                <p id="dayNumber"></p>
+                                <p id="dayMonth"></p>
+                            </div>
+                        </div>
+
+                        <div class="weather-data p-3" id="todayInfo">
+                            <p class="locationName" id="locationName"></p>
+                            <div class="degree d-flex align-items-center">
+                                <div class="d-flex">
+                                    <p id="todayTemp"></p>
+                                    <p><sup>o</sup>C</p>
+                                </div>
+                                <img src="" alt="" class="degree-icon ps-4" id="todaypicIcon">
+                            </div>
+                            <p class="degree-type mb-3 text-info fs-4" id="todayText"></p>
+                            
+                            <!-- static -->
+                            <div class="other-type mb-3" style="color: #c6c6c6">
+                                <span><img src="images/icon-umberella.png" alt=""> 20%</span>
+                                <span class="px-2"><img src="images/icon-wind.png" alt=""> 18km/h</span>
+                                <span class="px-2"><img src="images/icon-compass.png" alt=""> East</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="next-day col-md-4 text-white p-0 text-center" 
+                         style="background-color: #252730;"
+                         id="tomorrowDate">
+                        <div class="day-date p-2" style="background-color: rgba(0, 0, 0, 0.3);  color: #6D7575;">
+                            <p class="day" id="nextDayName"></p>
+                        </div>
+                        <div class="weather-data pt-5">
+                            <img src="" alt="" class="degree-icon" id="nextDayPicIcon">
+                            <div class="degree">
+                                <div class="degree1 fs-1 fw-bold d-flex align-items-center justify-content-center" id="nextDayTemp">
+                                    <p id="nextDayHighTemp"></p>
+                                    <p><sup>o</sup>C</p>
+                                </div>
+                               
+                                <div class="degree2 fw-bold d-flex align-items-center justify-content-center text-secondary fs-3" id="nextDayTemp">
+                                    <p id="nextDayLowTemp"></p>
+                                    <p><sup>o</sup></p>
+                                </div>
+                                
+                            </div>
+                            <p class="degree-type mb-3 text-info fs-5" id="nextDayText"></p>
+                        </div>
+
+                    </div>
+
+                    <div class="after-next-day col-md-4 text-white p-0 text-center">
+                        <div class="day-date next-day p-2  d-flex justify-content-center align-items-center text-center"
+                             style="background-color: rgba(0, 0, 0, 0.3);  color: #6D7575;"
+                             id="afterTomorrow">
+                            <p class="day" id="afterTomorrowName"></p>
+                        </div>
+                        <div class="weather-data pt-5">
+                            <img src="" alt="" class="degree-icon" id="afterTomorrowPicIcon">
+
+                            <div class="degree1 fs-1 fw-bold d-flex align-items-center justify-content-center" id="afterTomorrowTemp">
+                                <p id="afterTomorrowHighTemp"></p>
+                                <p><sup>o</sup>C</p>
+                            </div>
+                           
+                            <div class="degree2 fw-bold d-flex align-items-center justify-content-center text-secondary fs-3" id="afterTomorrowTemp">
+                                <p id="afterTomorrowLowTemp"></p>
+                                <p><sup>o</sup></p>
+                            </div>
+
+                            <p class="degree-type mb-3 text-info fs-5" id="afterTomorrowText"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-md-7">
+                    <div class="container search-input2 input-group mb-5 pt-5">
+                        <input type="text" class="form-control p-3 border-0" style="background-color: #252730; color: #009AD8;"
+                            placeholder="Enter your email to subscribe...">
+                        <button class="input-group-text btn btn-info" type="submit">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="footer-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer-text">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
